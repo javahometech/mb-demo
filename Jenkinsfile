@@ -6,5 +6,13 @@ pipeline{
         echo "building maven project"
       }
     }
+    stage("Deploy To Dev"){
+      when{
+        branch 'dev'
+      }
+      steps{
+        echo "deploying to dev"
+      }
+    }
   }
 }
